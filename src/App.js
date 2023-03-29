@@ -1,13 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from 'react'
+import '@fontsource/work-sans'
+//import { Counter } from './features/counter/Counter'
+import './styles/App.css'
+import Home from './pages/Home/Home'
+import Overview from './pages/Overview/Overview'
+import About from './pages/About/About'
+import Services from './pages/Services/Services'
+import References from './pages/References/References'
+import Projects from './pages/Projects/Projects'
+import Contact from './pages/Contact/Contact'
+import Footer from './pages/Footer/Footer'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Home />
+      <Overview />
+      <About />
+      <Services />
+      <References />
+      <Projects />
+      <Contact />
+      <Footer />
+    </div>
+  )
+}
+
+export default App
+
+/*  <header className="App-header">
         <Counter />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -50,9 +71,4 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */
