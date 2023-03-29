@@ -1,0 +1,17 @@
+@import '../_global.scss';
+
+ul {
+  display: flex;
+  list-style: none;
+  font-size: 21.952px;
+  line-height: 26px;
+  gap: 36.5px;
+}
+
+div {
+  ul {
+    li.lastchild {
+      color: #f9995d;
+    }
+  }
+}

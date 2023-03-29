@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Work Sans", "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  font-size: 21.952px;
+  line-height: 26px;
+  gap: 36.5px;
+}
+
+div ul li.lastchild {
+  color: #f9995d;
+}
