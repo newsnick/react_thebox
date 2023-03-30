@@ -3,6 +3,7 @@
 ul {
   display: flex;
   list-style: none;
+  white-space: nowrap;
   font-size: 21.952px;
   line-height: 26px;
   gap: 36.5px;
@@ -14,4 +15,30 @@ div {
       color: #f9995d;
     }
   }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoname {
+  color: $primarycolor;
+  font-size: 21.952px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 16.5px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.navleft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-right: 200.5px;
 }
