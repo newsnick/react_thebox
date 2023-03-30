@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +15,10 @@ ul {
   display: flex;
   list-style: none;
   white-space: nowrap;
-  font-size: 21.952px;
-  line-height: 26px;
+  font-size: 13.1712px;
+  line-height: 15px;
   gap: 36.5px;
+  color: #14171f;
 }
 
 div ul li.lastchild {
@@ -40,7 +42,7 @@ div ul li.lastchild {
   font-size: 21.952px;
   line-height: 26px;
   font-weight: 700;
-  padding: 16.5px;
+  padding: 16.5px 10px;
 }
 
 .italic {
@@ -57,6 +59,5 @@ div ul li.lastchild {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  padding-right: 200.5px;
+  padding-right: 350.5px;
 }

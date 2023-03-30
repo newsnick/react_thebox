@@ -1,0 +1,181 @@
+/* @import '../_global.scss';
+
+.servicescontainer {
+  background-color: $neutralbg;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  padding: 90px 160px 55px 158px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 0;
+  top: 1700px;
+  left: 200px;
+}
+
+.servicesinnerbox {
+  background-color: $neutralbg;
+}
+
+.cubes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cube,
+.cubeblue {
+  width: 198.3px;
+  height: 132.44px;
+  color: #2947a9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cube {
+  color: $primarycolor;
+  background-color: $whitegeneric;
+}
+
+.cubeblue {
+  background-color: $primarycolor;
+  color: $whitegeneric;
+}
+ */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Work Sans", "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.servicesmain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26.3424px;
+  line-height: 31px;
+  color: #292e3d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.servicescontainer {
+  background-color: #f6f8f7;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 32px 158px 58px 158px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 35px;
+  top: 1700px;
+}
+
+.servicesinnerbox {
+  background-color: #f6f8f7;
+}
+
+.cubes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 71px 1fr 71px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 35px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 35px 71px;
+}
+
+.cubes > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.cubes > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.cubes > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.cubes > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.cubes > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.cubes > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.cube,
+.cubeblue {
+  width: 198.3px;
+  height: 132.44px;
+  color: #2947a9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.cube {
+  color: #2947a9;
+  background-color: #ffffff;
+}
+
+.cubeblue {
+  background-color: #2947a9;
+  color: #ffffff;
+}

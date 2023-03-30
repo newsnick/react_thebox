@@ -4,7 +4,7 @@ import AssetsBox from '../../components/AssetsBox/AssetsBox'
 
 const Overview = () => {
   return (
-    <div className={styles.overview}>
+    <div className={styles.overviewcontainer}>
       <div className={styles.upperoverview}>
         <p className={styles.title}>Our Reputation</p>
       </div>

@@ -1,0 +1,113 @@
+/* @import '../_global.scss';
+
+.servicescontainer {
+  background-color: $neutralbg;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  padding: 90px 160px 55px 158px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 0;
+  top: 1700px;
+  left: 200px;
+}
+
+.servicesinnerbox {
+  background-color: $neutralbg;
+}
+
+.cubes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cube,
+.cubeblue {
+  width: 198.3px;
+  height: 132.44px;
+  color: #2947a9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cube {
+  color: $primarycolor;
+  background-color: $whitegeneric;
+}
+
+.cubeblue {
+  background-color: $primarycolor;
+  color: $whitegeneric;
+}
+ */
+
+@import '../_global.scss';
+
+.servicesmain {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  @include title;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.servicescontainer {
+  background-color: $neutralbg;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  padding: 32px 158px 58px 158px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 35px;
+  top: 1700px;
+}
+
+.servicesinnerbox {
+  background-color: $neutralbg;
+}
+
+.cubes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 35px 71px;
+}
+
+.cube,
+.cubeblue {
+  width: 198.3px;
+  height: 132.44px;
+  color: #2947a9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cube {
+  color: $primarycolor;
+  background-color: $whitegeneric;
+}
+
+.cubeblue {
+  background-color: $primarycolor;
+  color: $whitegeneric;
+}

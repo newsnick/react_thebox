@@ -1,0 +1,27 @@
+@import '../_global.scss';
+
+.refcontainer {
+  display: flex;
+  justify-content: center;
+}
+.refbox1 {
+  position: absolute;
+  top: 2000px;
+  margin-right: 500px;
+}
+
+.refbox2 {
+  position: absolute;
+  top: 2000px;
+  margin-right: 700px;
+  z-index: 1;
+}
+.refbox3 {
+  position: absolute;
+  top: 2000px;
+  margin-right: 900px;
+}
+.refbox4 {
+  position: absolute;
+  top: 2000px;
+}

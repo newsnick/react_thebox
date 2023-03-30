@@ -1,0 +1,13 @@
+@import '../_global.scss';
+
+.aboutcontainer {
+  position: absolute;
+  left: calc(50% - 660.02px / 2 - 113.57px);
+  top: 900px;
+}
+
+.aboutimg {
+  box-shadow: transparent 0px 14.6346px 17.5616px -2.92693px rgba(17, 24, 39, 0.1),
+    0px 5.85386px 5.85386px -2.92693px rgba(17, 24, 39, 0.04);
+  border-radius: 1.46346px;
+}

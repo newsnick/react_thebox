@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Work Sans", "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.aboutcontainer {
+  position: absolute;
+  left: calc(50% - 330.01px - 113.57px);
+  top: 900px;
+}
+
+.aboutimg {
+  -webkit-box-shadow: transparent 0px 14.6346px 17.5616px -2.92693px rgba(17, 24, 39, 0.1), 0px 5.85386px 5.85386px -2.92693px rgba(17, 24, 39, 0.04);
+          box-shadow: transparent 0px 14.6346px 17.5616px -2.92693px rgba(17, 24, 39, 0.1), 0px 5.85386px 5.85386px -2.92693px rgba(17, 24, 39, 0.04);
+  border-radius: 1.46346px;
+}

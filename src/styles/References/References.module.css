@@ -9,32 +9,35 @@
   font-weight: 400;
 }
 
-.title {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26.3424px;
-  line-height: 31px;
-  color: #292e3d;
-  text-align: center;
-}
-
-.overviewcontainer {
-  position: absolute;
-  top: 566.5px;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.upperoverview {
+.refcontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.refbox1 {
+  position: absolute;
+  top: 2000px;
+  margin-right: 500px;
+}
+
+.refbox2 {
+  position: absolute;
+  top: 2000px;
+  margin-right: 700px;
+  z-index: 1;
+}
+
+.refbox3 {
+  position: absolute;
+  top: 2000px;
+  margin-right: 900px;
+}
+
+.refbox4 {
+  position: absolute;
+  top: 2000px;
 }
