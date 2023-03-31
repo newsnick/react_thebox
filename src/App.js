@@ -19,6 +19,7 @@ function App() {
       <About />
       <Services />
       <References />
+      <Projects />
       {/* <Overview />
       <About />
       <Services />

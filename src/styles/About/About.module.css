@@ -9,6 +9,23 @@
   font-weight: 400;
 }
 
+ol {
+  font-weight: 500;
+  font-size: 17.5616px;
+  line-height: 21px;
+  text-align: left;
+  color: #c2c7d6;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  list-style: none;
+}
+
 .aboutcontainer {
   position: absolute;
   left: calc(50% - 330.01px - 113.57px);

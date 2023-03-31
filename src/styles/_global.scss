@@ -7,6 +7,8 @@ $primarytext: #3d445c;
 $secondarytext: #858ead;
 $whitegeneric: #ffffff;
 $altcolortext: #667299;
+$coloroli: #c2c7d6;
+$titlecolor: #292e3d;
 
 * {
   margin: 0;
@@ -17,11 +19,23 @@ $altcolortext: #667299;
   font-weight: 400;
 }
 
+ol {
+  font-weight: 500;
+  font-size: 17.5616px;
+  line-height: 21px;
+  text-align: left;
+  color: $coloroli;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  list-style: none;
+}
+
 @mixin title {
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 26.3424px;
   line-height: 31px;
-  color: #292e3d;
+  color: $titlecolor;
 }
