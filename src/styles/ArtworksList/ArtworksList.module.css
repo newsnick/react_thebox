@@ -1,0 +1,17 @@
+.thumbnailcontainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.thumbnailimage {
+  width: 280.99px;
+  height: 180.74px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

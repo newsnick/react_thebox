@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from '@reduxjs/toolkit'
+import artworksReducer from '../components/ArtworksList/artworkSlice'
+import placesReducer from '../components/PlacesList/placesSlice'
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    artworks: artworksReducer,
+    places: placesReducer,
   },
-});
+})

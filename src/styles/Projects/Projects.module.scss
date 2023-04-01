@@ -1,24 +1,27 @@
 @import '../_global.scss';
 
-.projectscontainer {
-  position: absolute;
-
-  top: 2850px;
-}
-
 .projectsmain {
+  position: absolute;
+  top: 2850px;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
+}
+
+.projectscontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.projectbox {
+  display: flex;
+  justify-content: center;
+  gap: 185px;
 }
 
 .sidebar {
 }
 
-.projectsbox {
-}
-
-.project1 {
-  width: 280.99px;
-  height: 242.01px;
-  border: 1px solid black;
+.projectbox {
 }

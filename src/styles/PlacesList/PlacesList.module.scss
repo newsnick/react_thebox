@@ -1,0 +1,13 @@
+.thumbnailcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.thumbnailimage {
+  height: 280px;
+  width: 250px;
+
+  object-fit: cover;
+  border-radius: 8px;
+}
