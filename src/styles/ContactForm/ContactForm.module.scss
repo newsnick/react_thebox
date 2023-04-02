@@ -1,0 +1,53 @@
+@import '../_global.scss';
+
+.submitbtn {
+  @include btn;
+  padding: 11.7077px 74.6346px;
+  margin-bottom: 45px;
+  background-color: $primarycolor;
+  color: $whitegeneric;
+}
+
+.inputfield {
+  @include inputfield;
+}
+
+.inputtextarea {
+  @include inputfield;
+  justify-content: center;
+  display: inline;
+  width: 525px;
+}
+
+.nameemail {
+  display: flex;
+  justify-content: center;
+  gap: 29.5px;
+}
+
+.msgphone {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 29.5px;
+}
+
+.neutraltext {
+  color: $neutralfield;
+  font-size: 11.7077px;
+  line-height: 14px;
+  margin: 5px 0 20px 0;
+  width: 660px;
+}
+
+.neutralasterisk {
+  color: $neutralasterisk;
+}
+
+.error {
+  color: red;
+}
+.invalid {
+  border-color: red;
+  color: red;
+}

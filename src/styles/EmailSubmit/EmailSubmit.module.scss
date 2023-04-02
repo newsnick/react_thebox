@@ -1,0 +1,46 @@
+@import '../_global.scss';
+
+.form {
+  display: flex;
+  align-items: center;
+  align-items: first baseline;
+  gap: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.input {
+  @include inputfield;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 5.317px 5.85386px;
+}
+
+.inputError {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+.submitButton {
+  @include btn;
+  background: $secondarycolor;
+  color: $whitegeneric;
+  border-radius: 2.92693px;
+  padding: 7.5px 17px;
+}
+
+.successContainer {
+  margin-top: 10px;
+}
+
+.successMessage {
+  color: green;
+}

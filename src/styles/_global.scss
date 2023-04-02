@@ -10,6 +10,11 @@ $altcolortext: #667299;
 $coloroli: #c2c7d6;
 $titlecolor: #292e3d;
 $bgform: #f6f8f7;
+$bordercolor: #e0e3eb;
+$inputtext: #a3aac2;
+$asteriskcolor: #ed6565;
+$neutralfield: #667299;
+$neutralasterisk: #c40303;
 
 *,
 ::after,
@@ -57,30 +62,6 @@ a {
   object-fit: cover;
 }
 
-:root {
-  /* fonts  */
-  --small-text: 0.875rem;
-  --extra-small-text: 0.7em;
-  /* rest of the vars */
-  /* --backgroundColor: var(--white); */
-  --backgroundColor: var(--grey-100);
-  --textColor: var(--grey-900);
-  --borderRadius: 0.25rem;
-  --letterSpacing: 1px;
-  --transition: 0.3s ease-in-out all;
-  --max-width: 1120px;
-  --fixed-width: 600px;
-  --view-width: 90vw;
-  /* box shadow*/
-  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
 @mixin title {
   font-family: 'Work Sans';
   font-style: normal;
@@ -88,4 +69,37 @@ a {
   font-size: 26.3424px;
   line-height: 31px;
   color: $titlecolor;
+}
+
+@mixin btn {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13.1712px;
+  line-height: 15px;
+  text-align: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border-radius: 1.46346px;
+  flex-direction: row;
+  padding: 11.7077px 14.6346px;
+  gap: 7.32px;
+  cursor: pointer;
+}
+
+@mixin inputfield {
+  background: $whitegeneric;
+  display: flex;
+  flex-direction: row;
+  padding: 7.31732px 5.85386px;
+  gap: 7.32px;
+  border: 0.731732px solid $bordercolor;
+  border-radius: 2.92693px;
+  color: $inputtext;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-size: 18px;
+  line-height: 21px;
 }

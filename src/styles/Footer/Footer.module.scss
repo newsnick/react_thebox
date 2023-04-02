@@ -2,5 +2,62 @@
 
 .footer {
   position: absolute;
-  top: 4000px;
+  top: 4065px;
+  width: 100%;
+}
+
+.connectfooter {
+  display: flex;
+  justify-content: center;
+  gap: 236px;
+}
+
+.leftfooter {
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22.5px 10px 58px 0;
+}
+
+.name1,
+.name2,
+.name3,
+.name4,
+.name5 {
+  color: $primarycolor;
+  font-weight: 500;
+  font-size: 14.6346px;
+  line-height: 17px;
+  font-variant: all-small-caps;
+}
+
+.name2 {
+  margin: 23px 13px 23px 0px;
+}
+
+.name3 {
+  padding-right: 18px;
+}
+.name4 {
+  padding: 10px 0 12px;
+}
+
+.name5 {
+  padding-top: 15px;
+}
+.values {
+  font-size: 14.6346px;
+  line-height: 17px;
+  text-transform: capitalize;
+  color: $titlecolor;
+  padding: 17px 0 0;
+}
+
+.vectors {
+  display: flex;
+  padding-top: 5%;
+  gap: 5%;
 }

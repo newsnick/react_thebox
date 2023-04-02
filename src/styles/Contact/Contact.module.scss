@@ -23,6 +23,17 @@
 
 .title {
   @include title;
+  margin-top: 35px;
+}
+
+.description {
+  font-size: 14.6346px;
+  line-height: 17px;
+  text-align: center;
+  width: 394.4px;
+  color: $titlecolor;
+  margin: 14px 0 27px 0;
+  display: inline-flex;
 }
 
 .contactform {
