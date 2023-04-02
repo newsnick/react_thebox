@@ -1,0 +1,25 @@
+.contactcontainer {
+  position: absolute;
+  top: 3500px;
+}
+
+.contactmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainbox {
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contactform {
+  position: absolute;
+  bottom: -3500px;
+  left: 50%;
+  transform: translateX(-50%);
+}
