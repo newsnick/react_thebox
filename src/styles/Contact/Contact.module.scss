@@ -1,6 +1,9 @@
+@import '../_global.scss';
+
 .contactcontainer {
   position: absolute;
   top: 3500px;
+  width: 100%;
 }
 
 .contactmain {
@@ -11,10 +14,15 @@
 
 .mainbox {
   text-align: center;
-  max-width: 400px;
+  width: 1054px;
+  background-color: $bgform;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.title {
+  @include title;
 }
 
 .contactform {

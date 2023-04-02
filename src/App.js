@@ -2,6 +2,7 @@ import React from 'react'
 import '@fontsource/work-sans'
 //import { Counter } from './features/counter/Counter'
 import './styles/App.css'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Overview from './pages/Overview/Overview'
 import About from './pages/About/About'
@@ -10,31 +11,31 @@ import References from './pages/References/References'
 import Projects from './pages/Projects/Projects'
 import Contact from './pages/Contact/Contact'
 import Footer from './pages/Footer/Footer'
+import NavBar from './components/NavBar/NavBar'
+import ContactForm from './components/ContactForm/ContactForm'
 
 function App() {
   return (
     <div className="App">
       <Home />
+
       <Overview />
       <About />
       <Services />
       <References />
       <Projects />
       <Contact />
-      {/* <Overview />
-      <About />
-      <Services />
-      <References />
-      <Projects />
-      <Contact />
-      <Footer /> */}
+
+      <Footer />
     </div>
   )
 }
 
 export default App
 
-/*  <header className="App-header">
+//////////////////////////////////////////
+/*
+  <header className="App-header">
         <Counter />
         <p>
           Edit <code>src/App.js</code> and save to reload.

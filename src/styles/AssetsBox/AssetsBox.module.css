@@ -32,8 +32,17 @@ ol {
   list-style: none;
 }
 
+li.active {
+  background-color: #555;
+}
+
+li:hover {
+  background-color: #f9995d;
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .img {

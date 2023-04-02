@@ -10,7 +10,7 @@ import rectangle from '../../assets/browser/icons/rectangle.svg'
 
 const Services = () => {
   return (
-    <div className={styles.servicesmain}>
+    <div className={styles.servicesmain} id="services">
       <div className={styles.servicescontainer}>
         <div className={styles.servicesinnerbox}>
           <p className={styles.header}>Services</p>

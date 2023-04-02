@@ -76,64 +76,38 @@ a {
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.refcontainer {
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f9995d;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.scrollToTop:hover {
+  opacity: 1;
+}
+.scrollToTop.visible {
+  opacity: 1;
+}
+.scrollToTop .scrollText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-.refbox1 {
-  position: absolute;
-  top: 2082px;
-  margin-left: -450px;
+.scrollToTop .scrollText p {
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 10px;
 }
-
-.refbox2 {
-  position: absolute;
-  top: 2304px;
-  margin-left: -387px;
-}
-
-.refbox3 {
-  position: absolute;
-  top: 2009px;
-  margin-left: -40px;
-}
-
-.refbox4 {
-  position: absolute;
-  top: 2227px;
-  margin-left: -130px;
-}
-
-.iconcup {
-  position: absolute;
-  top: 2250px;
-  margin-left: 35px;
-}
-
-.icondocument {
-  position: absolute;
-  top: 2065px;
-  margin-left: -725px;
-}
-
-.iconmap {
-  position: absolute;
-  top: 2420px;
-  margin-left: -130px;
-}
-
-.iconshakehands {
-  position: absolute;
-  top: 2030px;
-  margin-left: 165px;
-}
-
-.adscontainer {
-  position: absolute;
-  top: 2550px;
+.scrollToTop .scrollText .icon {
+  color: #ffffff;
+  font-size: 24px;
 }

@@ -18,6 +18,10 @@ div {
   }
 }
 
+li.lastchild:hover {
+  color: $whitegeneric;
+}
+
 .navbar {
   display: flex;
   align-items: center;

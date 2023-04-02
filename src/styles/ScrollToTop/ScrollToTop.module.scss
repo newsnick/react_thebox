@@ -1,0 +1,37 @@
+@import '../_global.scss';
+
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $secondarycolor;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .scrollText {
+    display: flex;
+    align-items: center;
+
+    p {
+      color: $whitegeneric;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .icon {
+      color: $whitegeneric;
+      font-size: 24px;
+    }
+  }
+}

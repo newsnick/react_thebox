@@ -5,7 +5,7 @@ import ArtworksList from '../../components/ArtworksList/ArtworksList'
 
 const Projects = () => {
   return (
-    <div className={styles.projectsmain}>
+    <div className={styles.projectsmain} id="projects">
       <div className={styles.projectscontainer}>
         <div className={styles.projectbox}>
           <div className={styles.sidebar}>
