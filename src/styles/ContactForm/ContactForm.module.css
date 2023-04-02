@@ -131,12 +131,11 @@ a {
       flex-grow: 0;
   font-size: 18px;
   line-height: 21px;
-  padding: 7.31732px 5.454px;
-  padding-right: 242px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   display: inline;
+  width: 525px;
 }
 
 .nameemail {
@@ -146,7 +145,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 11.5px;
+  gap: 29.5px;
 }
 
 .msgphone {
@@ -157,7 +156,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 15px 0;
-  gap: 11.5px;
+  gap: 29.5px;
 }
 
 .neutraltext {
@@ -170,4 +169,13 @@ a {
 
 .neutralasterisk {
   color: #c40303;
+}
+
+.error {
+  color: red;
+}
+
+.invalid {
+  border-color: red;
+  color: red;
 }

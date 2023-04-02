@@ -1,49 +1,38 @@
 import styles from '../../styles/NavBar/NavBar.module.scss'
-
 import logo from '../../assets/browser/images/logothebox.svg'
 import { HashLink as Link } from 'react-router-hash-link'
+import { links } from '../../utils'
 
-export default function NavBar() {
-  return (
-    <nav className={styles.navbar} id="/">
-      <div className={styles.navleft}>
-        <Link to="#/">
-          <img src={logo} alt="logo" />
-        </Link>
-        <Link to="#/">
-          <p className={styles.logoname}>
-            <span className={styles.italic}>The</span>Box
-          </p>
-        </Link>
-      </div>
+/* const links = [
+  { label: 'Home', to: '#/' },
+  { label: 'About Us', to: '#about' },
+  { label: 'Projects', to: '#projects' },
+  { label: 'Services', to: '#services' },
+  { label: 'Contact Us', to: '#contact', className: styles.lastchild },
+] */
 
-      <ul>
-        <li>
-          <Link to="#/" smooth>
-            Home
+const NavBar = () => (
+  <nav className={styles.navbar} id="/">
+    <div className={styles.navleft}>
+      <Link to="#/">
+        <img src={logo} alt="logo" />
+      </Link>
+      <Link to="#/">
+        <p className={styles.logoname}>
+          <span className={styles.italic}>The</span>Box
+        </p>
+      </Link>
+    </div>
+    <ul>
+      {links.map(({ label, to, className }) => (
+        <li key={to} className={className}>
+          <Link to={to} smooth>
+            {label}
           </Link>
         </li>
-        <li>
-          <Link to="#about" smooth>
-            About Us
-          </Link>
-        </li>
-        <li>
-          <Link to="#projects" smooth>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="#services" smooth>
-            Services
-          </Link>
-        </li>
-        <li className={styles.lastchild}>
-          <Link to="#contact" smooth>
-            Contact Us
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  )
-}
+      ))}
+    </ul>
+  </nav>
+)
+
+export default NavBar

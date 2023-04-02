@@ -20,19 +20,6 @@ function ContactForm() {
       <div className={styles.nameemail}>
         <div>
           <label htmlFor="fullName"></label>
-          {/* <input
-            className={styles.inputfield}
-            type="text"
-            placeholder="Your name *"
-            name="fullName"
-            {...register('fullName', {
-              required: 'This field is required',
-              pattern: {
-                value: nameRegex,
-                message: 'Invalid name format',
-              },
-            })}
-          /> */}
           <input
             className={`${styles.inputfield} ${
               errors.fullName ? 'invalid' : ''

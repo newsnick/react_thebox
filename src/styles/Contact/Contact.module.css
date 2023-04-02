@@ -54,7 +54,7 @@ a {
 
 .contactcontainer {
   position: absolute;
-  top: 3500px;
+  top: 3600px;
   width: 100%;
 }
 
@@ -86,6 +86,7 @@ a {
   font-size: 26.3424px;
   line-height: 31px;
   color: #292e3d;
+  margin-top: 35px;
 }
 
 .description {
@@ -93,6 +94,11 @@ a {
   line-height: 17px;
   text-align: center;
   width: 394.4px;
+  color: #292e3d;
+  margin: 14px 0 27px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .contactform {

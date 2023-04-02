@@ -103,3 +103,38 @@ a {
   font-size: 18px;
   line-height: 21px;
 }
+
+@mixin fetchedtitle {
+  font-weight: 700;
+  font-size: 14.6346px;
+  line-height: 17px;
+  text-align: center;
+  color: $whitegeneric;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: $primarycolor;
+}
+
+@mixin fetchedtext {
+  font-size: 18px;
+  line-height: 21px;
+  color: $whitegeneric;
+  background: $primarycolor;
+}
+
+@mixin fetchbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2.92693px 14.6346px;
+  gap: 7.32px;
+  width: 215.86px;
+  height: 46.83px;
+  background: $titlecolor;
+  font-size: 14px;
+  line-height: 21px;
+  color: $whitegeneric;
+  cursor: pointer;
+}
