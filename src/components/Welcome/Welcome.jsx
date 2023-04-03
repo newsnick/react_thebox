@@ -4,9 +4,9 @@ import bgimage from '../../assets/browser/images/bgimage.svg'
 
 const Welcome = () => {
   return (
-    <div>
+    <>
       <img className={styles.bgimage} src={bgimage} alt="" />
-    </div>
+    </>
   )
 }
 

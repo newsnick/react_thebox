@@ -3,14 +3,6 @@ import logo from '../../assets/browser/images/logothebox.svg'
 import { HashLink as Link } from 'react-router-hash-link'
 import { links } from '../../utils'
 
-/* const links = [
-  { label: 'Home', to: '#/' },
-  { label: 'About Us', to: '#about' },
-  { label: 'Projects', to: '#projects' },
-  { label: 'Services', to: '#services' },
-  { label: 'Contact Us', to: '#contact', className: styles.lastchild },
-] */
-
 const NavBar = () => (
   <nav className={styles.navbar} id="/">
     <div className={styles.navleft}>

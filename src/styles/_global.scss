@@ -33,7 +33,7 @@ html {
 
 ol {
   font-weight: 500;
-  font-size: 17.5616px;
+  font-size: 17.56px;
   line-height: 21px;
   text-align: left;
   color: $coloroli;
@@ -41,10 +41,6 @@ ol {
   order: 1;
   flex-grow: 0;
   list-style: none;
-}
-
-li.active {
-  background-color: #555;
 }
 
 li:hover {
@@ -66,7 +62,7 @@ a {
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 26.3424px;
+  font-size: 26.34px;
   line-height: 31px;
   color: $titlecolor;
 }
@@ -75,15 +71,15 @@ a {
   font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 13.1712px;
+  font-size: 13.17px;
   line-height: 15px;
   text-align: center;
   flex: none;
   order: 0;
   flex-grow: 0;
-  border-radius: 1.46346px;
+  border-radius: 1.46px;
   flex-direction: row;
-  padding: 11.7077px 14.6346px;
+  padding: 11.7px 14.6px;
   gap: 7.32px;
   cursor: pointer;
 }
@@ -92,10 +88,10 @@ a {
   background: $whitegeneric;
   display: flex;
   flex-direction: row;
-  padding: 7.31732px 5.85386px;
+  padding: 7.32px 5.85px;
   gap: 7.32px;
-  border: 0.731732px solid $bordercolor;
-  border-radius: 2.92693px;
+  border: 0.73px solid $bordercolor;
+  border-radius: 2.92px;
   color: $inputtext;
   flex: none;
   order: 0;
@@ -106,7 +102,7 @@ a {
 
 @mixin fetchedtitle {
   font-weight: 700;
-  font-size: 14.6346px;
+  font-size: 14.6px;
   line-height: 17px;
   text-align: center;
   color: $whitegeneric;
@@ -128,7 +124,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 2.92693px 14.6346px;
+  padding: 2.9px 14.6px;
   gap: 7.32px;
   width: 215.86px;
   height: 46.83px;

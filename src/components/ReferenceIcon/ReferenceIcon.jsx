@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 
 const ReferenceIcon = (props) => {
   return (
-    <div>
+    <>
       <img src={props.content} alt={props.content2} />
-    </div>
+    </>
   )
 }
 

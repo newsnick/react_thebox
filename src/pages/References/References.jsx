@@ -1,42 +1,25 @@
 import React from 'react'
 import ReferenceBox from '../../components/ReferenceBox/ReferenceBox'
-import styles from '../../styles/References/References.module.css'
-import iconcup from '../../assets/browser/icons/iconcup.svg'
-import icondocument from '../../assets/browser/icons/icondocument.svg'
-import iconmap from '../../assets/browser/icons/iconmap.svg'
-import iconshakehands from '../../assets/browser/icons/iconshakehands.svg'
+import stylesref from '../../styles/References/References.module.css'
 import ReferenceIcon from '../../components/ReferenceIcon/ReferenceIcon'
 import AdsBanner from '../../components/AdsBanner/AdsBanner'
+import { referencesData, iconData } from '../../utils.js'
 
 const References = () => {
   return (
-    <div className={styles.refcontainer}>
+    <div className={stylesref.refcontainer}>
       References
-      <div className={styles.refbox1}>
-        <ReferenceBox content="123" content2="Projects Completed" />
-      </div>
-      <div className={styles.refbox2}>
-        <ReferenceBox content="30" content2="Years in Business" />
-      </div>
-      <div className={styles.refbox3}>
-        <ReferenceBox content="84" content2="Happy Clients" />{' '}
-      </div>
-      <div className={styles.refbox4}>
-        <ReferenceBox content="37" content2="Awards Win" />
-      </div>
-      <div className={styles.iconcup}>
-        <ReferenceIcon content={iconcup} content2="iconcup" />
-      </div>
-      <div className={styles.icondocument}>
-        <ReferenceIcon content={icondocument} content2="icondocument" />
-      </div>
-      <div className={styles.iconshakehands}>
-        <ReferenceIcon content={iconshakehands} content2="iconshakehands" />
-      </div>
-      <div className={styles.iconmap}>
-        <ReferenceIcon content={iconmap} content2="iconmap" />
-      </div>
-      <div className={styles.adscontainer}>
+      {referencesData.map((item) => (
+        <div key={item.id} className={item.className}>
+          <ReferenceBox content={item.content} content2={item.content2} />
+        </div>
+      ))}
+      {iconData.map((item) => (
+        <div key={item.id} className={item.className}>
+          <ReferenceIcon content={item.content} content2={item.content2} />
+        </div>
+      ))}
+      <div className={stylesref.adscontainer}>
         <AdsBanner />
       </div>
     </div>
