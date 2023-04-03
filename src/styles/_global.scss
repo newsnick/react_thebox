@@ -1,3 +1,5 @@
+$FontPathWorkSans: '../../assets/browser/fonts/work-sans';
+@import '../../node_modules/font-work-sans/work-sans';
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 $primarycolor: #2947a9;
@@ -15,6 +17,7 @@ $inputtext: #a3aac2;
 $asteriskcolor: #ed6565;
 $neutralfield: #667299;
 $neutralasterisk: #c40303;
+$bgartwork: #3559c7;
 
 *,
 ::after,
@@ -22,7 +25,7 @@ $neutralasterisk: #c40303;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Work Sans', 'Helvetica';
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -68,7 +71,7 @@ a {
 }
 
 @mixin btn {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 13.17px;

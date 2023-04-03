@@ -5,3 +5,32 @@
   left: calc(50% - 1054px / 2 + 0.15px);
   top: 58.54px;
 }
+
+.headermain {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 174px;
+  left: 450px;
+}
+
+.header {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 52.6847px;
+  line-height: 62px;
+  color: $titlecolor;
+  max-width: 406px;
+}
+
+.artworkcontainer {
+  position: absolute;
+  top: 362px;
+  width: 100%;
+  left: 374px;
+}
+
+.artworkstitle {
+  display: flex;
+  justify-content: center;
+}

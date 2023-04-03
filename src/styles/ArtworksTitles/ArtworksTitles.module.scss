@@ -1,0 +1,47 @@
+@import '../_global.scss';
+
+.thumbnailcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: min-content;
+  height: 140px;
+  background-color: $bgartwork;
+}
+.title {
+  @include fetchedtitle;
+  padding: 3%;
+  text-align: left;
+  width: 304.4px;
+  text-align: center;
+  padding-top: 15px;
+  background-color: $bgartwork;
+}
+
+.content {
+  @include fetchedtext;
+  font-size: 17.56px;
+  line-height: 21px;
+  text-align: left;
+  padding: 4%;
+  text-align: center;
+  background-color: $bgartwork;
+}
+
+.thumbnailimage {
+  width: 280.99px;
+  height: 180.74px;
+  object-fit: cover;
+}
+
+.artwork {
+}
+
+.buttonscontainer {
+  display: flex;
+}
+
+.button {
+  @include fetchbtn;
+  width: 152.55px;
+  height: 29px;
+}

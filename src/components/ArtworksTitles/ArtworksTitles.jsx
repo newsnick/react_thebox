@@ -1,23 +1,31 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchArtworks } from '../../Redux/reducer/artworkSlice'
-import styles from '../../styles/ArtworksList/ArtworksList.module.scss'
+import { fetchArtworks } from '../../Redux/reducer/artworkSlice2'
+import styles from '../../styles/ArtworksTitles/ArtworksTitles.module.scss'
 
-const ArtworksList = () => {
+const ArtworkTitles = () => {
   const dispatch = useDispatch()
   const { artworks, loading, error } = useSelector((state) => state.artworks)
   const [startIndex, setStartIndex] = useState(0)
-  const endIndex = Math.min(startIndex + 4, artworks.length)
-  const selectedArtworks = artworks.slice(startIndex, endIndex)
+  const endIndex = Math.min(startIndex + 1, artworks.length)
 
+  const selectedArtworks = artworks.length
+    ? artworks.slice(startIndex, endIndex)
+    : []
+
+  /*   useEffect(() => {
+    dispatch(fetchArtworks())
+  }, [dispatch]) */
   useEffect(() => {
     dispatch(fetchArtworks())
+      .then((response) => console.log(response.payload))
+      .catch((error) => console.log(error))
   }, [dispatch])
 
   const handleNextClick = () =>
-    setStartIndex((startIndex + 4) % artworks.length)
+    setStartIndex((startIndex + 1) % artworks.length)
   const handleBackClick = () =>
-    setStartIndex(startIndex - 4 < 0 ? artworks.length - 4 : startIndex - 4)
+    setStartIndex(startIndex - 1 < 0 ? artworks.length - 1 : startIndex - 1)
 
   return (
     <div>
@@ -28,18 +36,20 @@ const ArtworksList = () => {
       ) : (
         <>
           <div className={styles.thumbnailcontainer}>
+            {/* {selectedArtworks.map((artwork) => (
+              <div key={artwork.id} className={styles.artwork}>
+                <h2 className={styles.title}>{artwork.title}</h2>
+                <p className={styles.content}>{artwork.description}</p>
+              </div>
+            ))} */}
             {selectedArtworks.map((artwork) => (
               <div key={artwork.id} className={styles.artwork}>
-                <img
-                  className={styles.thumbnailimage}
-                  src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
-                  alt={artwork.artist_title}
-                />
                 <h2 className={styles.title}>{artwork.title}</h2>
-                <p className={styles.content}>{artwork.department_title}</p>
+                <p className={styles.content}>{artwork.artist_display}</p>
               </div>
             ))}
           </div>
+
           <div className={styles.buttonscontainer}>
             <button className={styles.button} onClick={handleBackClick}>
               &larr; back
@@ -54,4 +64,4 @@ const ArtworksList = () => {
   )
 }
 
-export default ArtworksList
+export default ArtworkTitles
