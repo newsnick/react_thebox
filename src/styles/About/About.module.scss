@@ -7,7 +7,40 @@
 }
 
 .aboutimg {
-  box-shadow: transparent 0px 14.6346px 17.5616px -2.92693px rgba(17, 24, 39, 0.1),
-    0px 5.85386px 5.85386px -2.92693px rgba(17, 24, 39, 0.04);
-  border-radius: 1.46346px;
+  box-shadow: transparent 0px 14.63px 17.56px -2.92px rgba(17, 24, 39, 0.1),
+    0px 5.85px 5.85px -2.92px rgba(17, 24, 39, 0.04);
+  border-radius: 1.46px;
+}
+
+.aboutbox {
+  position: absolute;
+  top: 500px;
+
+  padding: 36px 30px;
+  background-color: $primarycolor;
+  color: $whitegeneric;
+  top: 50px;
+  left: 550px;
+}
+
+.contentbox {
+  width: 284px;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 26.34px;
+  line-height: 31px;
+}
+
+.text {
+  font-size: 14.63px;
+  line-height: 17px;
+  padding-top: 27px;
+  padding-bottom: 53px;
+}
+
+.btn {
+  @include btn;
+  color: $primarycolor;
 }

@@ -11,7 +11,6 @@
   position: absolute;
   z-index: 1;
   top: 174px;
-  left: 450px;
 }
 
 .header {
@@ -20,7 +19,9 @@
   font-size: 52.6847px;
   line-height: 62px;
   color: $titlecolor;
-  max-width: 406px;
+  margin-left: -505px;
+  display: flex;
+  justify-content: center;
 }
 
 .artworkcontainer {

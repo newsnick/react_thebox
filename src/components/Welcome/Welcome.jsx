@@ -7,7 +7,9 @@ const Welcome = () => {
   return (
     <>
       <div className={styles.headermain}>
-        <p className={styles.header}>Building things is our mission.</p>
+        <p className={styles.header}>
+          Building things <br /> is our mission.
+        </p>
       </div>
 
       <img className={styles.bgimage} src={bgimage} alt="" />
