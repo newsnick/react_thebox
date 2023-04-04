@@ -2,7 +2,7 @@ import React from 'react'
 import SideBar from '../../components/SideBar/SideBar'
 import styles from '../../styles/Projects/Projects.module.scss'
 import ArtworksList from '../../components/ArtworksList/ArtworksList'
-import PlacesList from '../../components/PlacesList/PlacesList'
+import FetchApiData from '../../components/FetchApiData/FetchApiData'
 
 const Projects = () => {
   return (
@@ -12,6 +12,7 @@ const Projects = () => {
           <div className={styles.sidebar}>
             <p>Projects</p>
             <SideBar />
+            <FetchApiData apiUrl="https://api.artic.edu/api/v1/artworks?limit=100" />
           </div>
 
           <div className={styles.project}>

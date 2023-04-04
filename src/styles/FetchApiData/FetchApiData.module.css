@@ -159,36 +159,3 @@ a {
   text-align: left;
   padding: 4%;
 }
-
-.buttonscontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 150px;
-  margin-top: 23px;
-}
-
-.button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2.9px 14.6px;
-  gap: 7.32px;
-  width: 215.86px;
-  height: 46.83px;
-  background: #292e3d;
-  font-size: 14px;
-  line-height: 21px;
-  color: #ffffff;
-  cursor: pointer;
-}
