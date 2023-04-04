@@ -1,0 +1,29 @@
+@import '../_global.scss';
+
+.thumbnailcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: min-content;
+  height: 520px;
+}
+
+.thumbnailimage {
+  width: 280.99px;
+  height: 180.74px;
+  object-fit: cover;
+}
+
+.title {
+  @include fetchedtitle;
+  padding: 3%;
+  text-align: left;
+}
+
+.content {
+  @include fetchedtext;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  padding: 4%;
+}
