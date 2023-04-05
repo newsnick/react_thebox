@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { useDispatch } from 'react-redux'
 import axios from 'axios'
+import { useCallback } from 'react'
 
 const initialState = {
   artworks: [],
@@ -36,5 +38,14 @@ export const artworksReducer = createSlice({
       })
   },
 })
+
+export const useFetchArtworks = () => {
+  const dispatch = useDispatch()
+  const memoizedFetchArtworks = useCallback(() => {
+    dispatch(fetchArtworks())
+  }, [dispatch])
+
+  return memoizedFetchArtworks
+}
 
 export default artworksReducer.reducer

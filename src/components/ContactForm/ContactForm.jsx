@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import styles from '../../styles/ContactForm/ContactForm.module.scss'
 import { nameRegex, emailRegex } from '../../utils'
+import { useCallback } from 'react'
 
 function ContactForm() {
   const {
@@ -9,9 +10,9 @@ function ContactForm() {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => {
+  const onSubmit = useCallback((data) => {
     console.log(data)
-  }
+  }, [])
 
   const nameEmailDiv = (
     <div className={styles.nameemail}>
