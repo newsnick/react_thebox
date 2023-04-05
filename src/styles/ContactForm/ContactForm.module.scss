@@ -16,7 +16,10 @@
   @include inputfield;
   justify-content: center;
   display: inline;
-  width: 525px;
+
+  width: 523px;
+  height: 98px;
+  resize: none;
 }
 
 .nameemail {

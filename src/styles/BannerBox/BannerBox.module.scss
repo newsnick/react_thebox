@@ -1,0 +1,34 @@
+@import '../_global.scss';
+
+.bannerbox {
+  position: absolute;
+  display: flex;
+  top: 73px;
+  left: 81px;
+  gap: 140px;
+}
+
+.title {
+  @include title;
+  font-size: 26.34px;
+  line-height: 31px;
+}
+
+.text {
+  font-size: 17.5616px;
+  line-height: 21px;
+  padding-top: 20px;
+}
+
+.refbutton {
+  @include btn;
+  background-color: transparent;
+  border: 1px solid $whitegeneric;
+}
+
+.bannerbox,
+.title,
+.text,
+.refbutton {
+  color: $whitegeneric;
+}
