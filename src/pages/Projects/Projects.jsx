@@ -29,9 +29,9 @@ export default Projects */
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchArtworks } from '../../Redux/reducer/artworkSlice'
-import SideBar from '../../components/SideBar/SideBar'
 import styles from '../../styles/Projects/Projects.module.scss'
 import ArtworksList from '../../components/ArtworksList/ArtworksList'
+import SidebarTwo from '../../components/SideBarTwo/SideBarTwo.jsx'
 
 const Projects = () => {
   const dispatch = useDispatch()
@@ -47,7 +47,7 @@ const Projects = () => {
         <div className={styles.projectbox}>
           <div className={styles.sidebar}>
             <p>Projects</p>
-            <SideBar />
+            <SidebarTwo />
             {/* <FetchApiData apiUrl="https://api.artic.edu/api/v1/artworks?limit=100" /> */}
           </div>
 
