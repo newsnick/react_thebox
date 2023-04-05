@@ -1,0 +1,27 @@
+@import '../_global.scss';
+
+.refsummary {
+  position: absolute;
+  top: 2047px;
+  max-width: 262px;
+  margin-left: 575px;
+}
+.header {
+  font-weight: 700;
+  font-size: 43.9px;
+  line-height: 51px;
+  color: $primarycolor;
+}
+
+.content {
+  font-size: 14.63px;
+  line-height: 17px;
+  color: $altcolortext2;
+  margin: 30px auto 49px;
+}
+
+.refbutton {
+  @include btn;
+  background-color: $primarycolor;
+  color: $whitegeneric;
+}

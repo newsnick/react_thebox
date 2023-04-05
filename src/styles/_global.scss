@@ -9,6 +9,7 @@ $primarytext: #3d445c;
 $secondarytext: #858ead;
 $whitegeneric: #ffffff;
 $altcolortext: #667299;
+$altcolortext2: #525b7a;
 $coloroli: #c2c7d6;
 $titlecolor: #292e3d;
 $bgform: #f6f8f7;
@@ -85,6 +86,7 @@ a {
   padding: 11.7px 14.6px;
   gap: 7.32px;
   cursor: pointer;
+  border-style: none;
 }
 
 @mixin inputfield {
@@ -101,6 +103,7 @@ a {
   flex-grow: 0;
   font-size: 18px;
   line-height: 21px;
+  border-style: none;
 }
 
 @mixin fetchedtitle {
