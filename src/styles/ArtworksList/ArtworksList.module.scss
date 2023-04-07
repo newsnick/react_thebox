@@ -6,6 +6,9 @@
   grid-gap: 20px;
   width: min-content;
   height: 540px;
+  left: 325px;
+  position: absolute;
+  top: 0px;
 }
 
 .thumbnailimage {
@@ -18,6 +21,7 @@
   @include fetchedtitle;
   padding: 3%;
   text-align: left;
+  max-width: 281px;
 }
 
 .content {
@@ -26,12 +30,16 @@
   line-height: 21px;
   text-align: left;
   padding: 4%;
+  max-width: 281px;
 }
 
 .buttonscontainer {
   display: flex;
   gap: 150px;
   margin-top: 23px;
+  position: absolute;
+  top: 520px;
+  left: 325px;
 }
 
 .button {

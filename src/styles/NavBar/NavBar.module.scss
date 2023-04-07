@@ -1,10 +1,9 @@
 @import '../_global.scss';
 
 ul {
-  display: flex;
   list-style: none;
   white-space: nowrap;
-  font-size: 13.1712px;
+  font-size: 13.17px;
   line-height: 15px;
   gap: 36.5px;
   color: #14171f;
@@ -30,7 +29,7 @@ li.lastchild:hover {
 
 .logoname {
   color: $primarycolor;
-  font-size: 21.952px;
+  font-size: 21.95px;
   line-height: 26px;
   font-weight: 700;
   padding: 16.5px 10px;

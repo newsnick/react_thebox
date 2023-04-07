@@ -11,9 +11,20 @@ const initialState = {
 
 export const fetchArtworks = createAsyncThunk(
   'artworks/fetchArtworks',
-  async () => {
-    const { data } = await axios.get('https://api.artic.edu/api/v1/artworks')
-    return data.data
+  async (searchTerm) => {
+    const { data } = await axios.get(
+      `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&fields=image_id,title,department_title`
+    )
+
+    const artworks = data.data.map((artwork) => {
+      const imageId = artwork.image_id || '0'
+
+      const imageUrl = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`
+
+      return { ...artwork, image_id: imageId, imageUrl }
+    })
+
+    return artworks
   }
 )
 

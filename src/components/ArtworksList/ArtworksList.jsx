@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchArtworks } from '../../Redux/reducer/artworkSlice'
 import styles from '../../styles/ArtworksList/ArtworksList.module.scss'
 
-const ArtworksList = () => {
+const ArtworksList = ({ searchTerm = '' }) => {
   const dispatch = useDispatch()
   const { artworks, loading, error } = useSelector((state) => state.artworks)
   const [startIndex, setStartIndex] = useState(0)
@@ -11,8 +11,8 @@ const ArtworksList = () => {
   const selectedArtworks = artworks.slice(startIndex, endIndex)
 
   useEffect(() => {
-    dispatch(fetchArtworks())
-  }, [dispatch])
+    dispatch(fetchArtworks(searchTerm))
+  }, [dispatch, searchTerm])
 
   const handleNextClick = () =>
     setStartIndex((startIndex + 4) % artworks.length)

@@ -36,16 +36,10 @@ const ArtworkTitles = () => {
       ) : (
         <>
           <div className={styles.thumbnailcontainer}>
-            {/* {selectedArtworks.map((artwork) => (
-              <div key={artwork.id} className={styles.artwork}>
-                <h2 className={styles.title}>{artwork.title}</h2>
-                <p className={styles.content}>{artwork.description}</p>
-              </div>
-            ))} */}
             {selectedArtworks.map((artwork) => (
               <div key={artwork.id} className={styles.artwork}>
                 <h2 className={styles.title}>{artwork.title}</h2>
-                <p className={styles.content}>{artwork.artist_display}</p>
+                <p className={styles.content}>{artwork.dimensions}</p>
               </div>
             ))}
           </div>
