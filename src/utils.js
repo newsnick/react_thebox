@@ -138,3 +138,26 @@ export const iconData = [
     className: stylesref.iconmap,
   },
 ]
+
+export const possibleKeywords = [
+  'Abstract',
+  'Expressionism',
+  'Cubism',
+  'Surrealism',
+  'Impressionism',
+  'Landscapes',
+  'Cityscapes',
+  'Still life',
+  'Portraits',
+  'Sculpture',
+  'Installation',
+  'Performance art',
+  'Modern art',
+  'Contemporary art',
+  'Folk art',
+  'Outsider art',
+  'Decorative art',
+  'Graphic design',
+  'Typography',
+  'Photography',
+]

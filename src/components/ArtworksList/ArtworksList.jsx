@@ -1,14 +1,32 @@
-import { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchArtworks } from '../../Redux/reducer/artworkSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { useState, useEffect } from 'react'
 import styles from '../../styles/ArtworksList/ArtworksList.module.scss'
+import { fetchArtworks } from '../../Redux/reducer/artworkSlice'
+
+const ArtworkModal = ({ artwork, closeModal }) => (
+  <div className={styles.modalBackdrop} onClick={closeModal}>
+    <div className={styles.modalContainer}>
+      <button className={styles.closeButton} onClick={closeModal}>
+        X
+      </button>
+      <img
+        className={styles.modalImage}
+        src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
+        alt={artwork.artist_title}
+      />
+      <h2 className={styles.modalTitle}>{artwork.title}</h2>
+      <p className={styles.modalContent}>{artwork.department_title}</p>
+    </div>
+  </div>
+)
 
 const ArtworksList = ({ searchTerm = '' }) => {
-  const dispatch = useDispatch()
   const { artworks, loading, error } = useSelector((state) => state.artworks)
   const [startIndex, setStartIndex] = useState(0)
   const endIndex = Math.min(startIndex + 4, artworks.length)
   const selectedArtworks = artworks.slice(startIndex, endIndex)
+  const [selectedArtwork, setSelectedArtwork] = useState(null)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(fetchArtworks(searchTerm))
@@ -17,19 +35,23 @@ const ArtworksList = ({ searchTerm = '' }) => {
   const handleNextClick = () =>
     setStartIndex((startIndex + 4) % artworks.length)
   const handleBackClick = () =>
-    setStartIndex(startIndex - 4 < 0 ? artworks.length - 4 : startIndex - 4)
+    setStartIndex((startIndex - 4 + artworks.length) % artworks.length)
+  const handleArtworkClick = (artwork) => setSelectedArtwork(artwork)
+  const closeModal = () => setSelectedArtwork(null)
 
   return (
     <div>
-      {loading ? (
-        <div>Loading...</div>
-      ) : error ? (
-        <div>{error}</div>
-      ) : (
+      {loading && <div>Loading...</div>}
+      {error && <div>{error}</div>}
+      {artworks.length > 0 && (
         <>
           <div className={styles.thumbnailcontainer}>
             {selectedArtworks.map((artwork) => (
-              <div key={artwork.id} className={styles.artwork}>
+              <div
+                key={artwork.id}
+                className={styles.artwork}
+                onClick={() => handleArtworkClick(artwork)}
+              >
                 <img
                   className={styles.thumbnailimage}
                   src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
@@ -48,6 +70,9 @@ const ArtworksList = ({ searchTerm = '' }) => {
               next &rarr;
             </button>
           </div>
+          {selectedArtwork && (
+            <ArtworkModal artwork={selectedArtwork} closeModal={closeModal} />
+          )}
         </>
       )}
     </div>

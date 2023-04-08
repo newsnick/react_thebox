@@ -9,6 +9,7 @@
   left: 325px;
   position: absolute;
   top: 0px;
+  cursor: pointer;
 }
 
 .thumbnailimage {
@@ -44,4 +45,38 @@
 
 .button {
   @include fetchbtn;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: grid;
+  place-items: center;
+  transition: 0.3s ease-in-out all;
+  z-index: 100;
+}
+
+.modalContainer {
+  width: 80vw;
+  max-width: 800px;
+  height: 80vh;
+  overflow: scroll;
+  background: $whitegeneric;
+  border-radius: 0.25rem;
+}
+
+.modalImage {
+  max-width: 770px;
+}
+
+.modalTitle {
+  padding: 5%;
+}
+
+.modalContent {
+  padding-left: 5%;
 }
