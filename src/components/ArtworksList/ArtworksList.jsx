@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import styles from '../../styles/ArtworksList/ArtworksList.module.scss'
 import { fetchArtworks } from '../../Redux/reducer/artworkSlice'
 
@@ -23,8 +23,14 @@ const ArtworkModal = ({ artwork, closeModal }) => (
 const ArtworksList = ({ searchTerm = '' }) => {
   const { artworks, loading, error } = useSelector((state) => state.artworks)
   const [startIndex, setStartIndex] = useState(0)
-  const endIndex = Math.min(startIndex + 4, artworks.length)
-  const selectedArtworks = artworks.slice(startIndex, endIndex)
+  const endIndex = useMemo(
+    () => Math.min(startIndex + 4, artworks.length),
+    [startIndex, artworks.length]
+  )
+  const selectedArtworks = useMemo(
+    () => artworks.slice(startIndex, endIndex),
+    [artworks, startIndex, endIndex]
+  )
   const [selectedArtwork, setSelectedArtwork] = useState(null)
   const dispatch = useDispatch()
 
@@ -32,12 +38,19 @@ const ArtworksList = ({ searchTerm = '' }) => {
     dispatch(fetchArtworks(searchTerm))
   }, [dispatch, searchTerm])
 
-  const handleNextClick = () =>
-    setStartIndex((startIndex + 4) % artworks.length)
-  const handleBackClick = () =>
-    setStartIndex((startIndex - 4 + artworks.length) % artworks.length)
-  const handleArtworkClick = (artwork) => setSelectedArtwork(artwork)
-  const closeModal = () => setSelectedArtwork(null)
+  const handleNextClick = useCallback(
+    () => setStartIndex((startIndex + 4) % artworks.length),
+    [startIndex, artworks.length]
+  )
+  const handleBackClick = useCallback(
+    () => setStartIndex((startIndex - 4 + artworks.length) % artworks.length),
+    [startIndex, artworks.length]
+  )
+  const handleArtworkClick = useCallback(
+    (artwork) => setSelectedArtwork(artwork),
+    []
+  )
+  const closeModal = useCallback(() => setSelectedArtwork(null), [])
 
   return (
     <div>

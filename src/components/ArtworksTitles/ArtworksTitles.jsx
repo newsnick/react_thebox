@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchArtworks } from '../../Redux/reducer/artworkSlice2'
 import styles from '../../styles/ArtworksTitles/ArtworksTitles.module.scss'
@@ -7,15 +7,12 @@ const ArtworkTitles = () => {
   const dispatch = useDispatch()
   const { artworks, loading, error } = useSelector((state) => state.artworks)
   const [startIndex, setStartIndex] = useState(0)
-  const endIndex = Math.min(startIndex + 1, artworks.length)
 
-  const selectedArtworks = artworks.length
-    ? artworks.slice(startIndex, endIndex)
-    : []
+  const selectedArtworks = useMemo(() => {
+    const endIndex = Math.min(startIndex + 1, artworks.length)
+    return artworks.length ? artworks.slice(startIndex, endIndex) : []
+  }, [artworks, startIndex])
 
-  /*   useEffect(() => {
-    dispatch(fetchArtworks())
-  }, [dispatch]) */
   useEffect(() => {
     dispatch(fetchArtworks())
       .then((response) => console.log(response.payload))
