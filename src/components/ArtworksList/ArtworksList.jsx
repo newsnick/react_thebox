@@ -75,13 +75,24 @@ const ArtworksList = ({ searchTerm = '' }) => {
               </div>
             ))}
           </div>
-          <div className={styles.buttonscontainer}>
+          {/* <div className={styles.buttonscontainer}>
             <button className={styles.button} onClick={handleBackClick}>
               &larr; back
             </button>
             <button className={styles.button} onClick={handleNextClick}>
               next &rarr;
             </button>
+          </div> */}
+          <div className={styles.buttonscontainer}>
+            {['&larr; back', 'next &rarr;'].map((buttonText, index) => (
+              <button
+                key={index}
+                className={styles.button}
+                onClick={index === 0 ? handleBackClick : handleNextClick}
+              >
+                {buttonText}
+              </button>
+            ))}
           </div>
           {selectedArtwork && (
             <ArtworkModal artwork={selectedArtwork} closeModal={closeModal} />
