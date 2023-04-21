@@ -52,6 +52,8 @@ const ArtworksList = ({ searchTerm = '' }) => {
   )
   const closeModal = useCallback(() => setSelectedArtwork(null), [])
 
+  const buttons = ['<< back', 'next >>']
+
   return (
     <div>
       {loading && <div>Loading...</div>}
@@ -75,20 +77,12 @@ const ArtworksList = ({ searchTerm = '' }) => {
               </div>
             ))}
           </div>
-          {/* <div className={styles.buttonscontainer}>
-            <button className={styles.button} onClick={handleBackClick}>
-              &larr; back
-            </button>
-            <button className={styles.button} onClick={handleNextClick}>
-              next &rarr;
-            </button>
-          </div> */}
           <div className={styles.buttonscontainer}>
-            {['&larr; back', 'next &rarr;'].map((buttonText, index) => (
+            {buttons.map((buttonText, index) => (
               <button
                 key={index}
                 className={styles.button}
-                onClick={index === 0 ? handleBackClick : handleNextClick}
+                onClick={index ? handleBackClick : handleNextClick}
               >
                 {buttonText}
               </button>

@@ -8,12 +8,13 @@ import FetchArtworksPart4 from '../../components/FetchArtworksPart4/FetchArtwork
 import { item } from '../../utils.js'
 
 const SideBar = (props) => {
-  const [showComponents, setShowComponents] = useState([
-    false,
-    false,
-    false,
-    false,
-  ])
+  // const [showComponents, setShowComponents] = useState([
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  // ])
+  const [showComponents, setShowComponents] = useState([, , , ,])
   const [artworks, setArtworks] = useState([])
 
   useEffect(() => {
@@ -25,16 +26,17 @@ const SideBar = (props) => {
     fetchData()
   }, [])
 
-  /* const toggleShowComponent = (index) => {
-    const updatedComponents = showComponents.map((val, i) =>
-      i === index ? !val : false
-    )
-    setShowComponents(updatedComponents)
-  }
- */
+  // const toggleShowComponent = (index) => {
+  //   setShowComponents((prevShowComponents) =>
+  //     prevShowComponents.map((val, i) => (i === index ? !val : val))
+  //   )
+  // }
+
   const toggleShowComponent = (index) => {
     setShowComponents((prevShowComponents) =>
-      prevShowComponents.map((val, i) => (i === index ? !val : val))
+      prevShowComponents.map((val, i) =>
+        i === index ? !Boolean(val) : Boolean(val)
+      )
     )
   }
   const items = [
