@@ -26,12 +26,6 @@ const SideBar = (props) => {
     fetchData()
   }, [])
 
-  // const toggleShowComponent = (index) => {
-  //   setShowComponents((prevShowComponents) =>
-  //     prevShowComponents.map((val, i) => (i === index ? !val : val))
-  //   )
-  // }
-
   const toggleShowComponent = (index) => {
     setShowComponents((prevShowComponents) =>
       prevShowComponents.map((val, i) =>
